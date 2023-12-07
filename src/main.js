@@ -5,7 +5,7 @@
         numberquestiontest: 50, // số câu hỏi trong bài thi
     };
     var countdownInterval;
-    const optionData = {},
+    const optionData = {};
     resetAll();
 
     //---- thao tác nguồn dữ liệu
