@@ -76,21 +76,6 @@
         const source = getModuleData(true)
         showPopup(source, 3)
     });
-    // nhấn ESC
-    document.addEventListener("keyup", function(e) {
-        if (27 === e.keyCode) {
-            e.preventDefault();
-            resetAll();
-        }
-    })
-
-    function hdsd() {
-        var link = document.createElement("a");
-        link.href = "./src/hdsd.png";
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-    }
 
     //-----Phần tạo popup câu hỏi, chấm thi
     function showPopup(source, loai = 1) {
