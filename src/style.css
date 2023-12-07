@@ -79,7 +79,7 @@ margin:auto;
 }
 .popup {
   position:fixed;
-  height:100vh;
+  height:90vh;
   width:100%;
   margin:auto;
   z-index:2;
