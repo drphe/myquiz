@@ -91,7 +91,7 @@ button {
   left:10%;
   top:20px;
   margin:auto;
-  popsition: fixed;
+  position: fixed;
   z-index:2;
   box-shadow:rgba(0,0,0,0.33) -3px 2px 10px 1px;
   color:rgb(92,92,92);
