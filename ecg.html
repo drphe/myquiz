@@ -10,8 +10,11 @@
         margin: 4px;
 	overflow: hidden;
 	margin-top: 0px;
+	font-family: arial;
     }
-
+    button {
+    font-size:16x!important;
+    }
     body {
         display: flex;
     }
@@ -43,12 +46,13 @@
 
     <div class="right">
         <div id="poll"></div>
+	<button id="next" style="width:100%;height: 30px; color: white; background-color: blue;"> Xem tiếp </button>
+	<button id="pre" style="width:100%;height: 30px; color: white; background-color: green;"> Xem trước </button>
     </div>
 
     <script>
         const div = document.querySelector("#poll");
         const input = document.querySelector("input");
-        const button = document.querySelector("#ok");
         addQuestion(0);
         input.addEventListener("keyup", function(t) {
             13 === t.keyCode && (t.preventDefault(), addQuestion(0))
@@ -59,17 +63,22 @@ document.addEventListener("keyup", function(e) {
     37 === e.keyCode && (e.preventDefault(), addQuestion(-1))
 })
         // Xử lý sự kiện click của button
-        button.addEventListener("click", () => {
+        document.querySelector("#ok").addEventListener("click", () => {
             addQuestion(0);
         });
-
+        document.querySelector("#next").addEventListener("click", () => {
+            addQuestion(1);
+        });
+        document.querySelector("#pre").addEventListener("click", () => {
+            addQuestion(-1);
+        });
         function addQuestion(ne) {
             const id = parseInt(input.value);
             div.innerHTML = "";
             const iframe = document.createElement("iframe");
             iframe.src = "https://bsgdtphcm.vn/ecg/ecg_poll2.php?poll_id=" + (id + ne);
             ne && (input.value = id + ne);
-            iframe.style.width = "800px";
+            iframe.style.width = "850px";
             iframe.style.height = "500px";
             iframe.style.border = null;
             // Chèn iframe vào web
