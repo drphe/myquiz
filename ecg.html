@@ -28,12 +28,17 @@
 
     .right {
         width: 100%;
+	padding:0px;
     }
 
     iframe {
 	width: 100%;
         border: 0px;
     }
+.bitt{
+position: absolute;
+    width: -webkit-fill-available;
+}
 </style>
 
 <body>
@@ -47,9 +52,9 @@
 
     <div class="right">
         <div id="poll"></div>
-	<div style="display: flex;">
-	<button id="pre" style="width:50%;height: 30px; color: white; background-color: green;"> Xem trước </button>
-	<button id="next" style="width:50%;height: 30px; color: white; background-color: blue;"> Xem tiếp </button>
+	<div style="display: flex;" class="bitt">
+	<button id="pre" style="width:50%;height: 30px; color: white; background-color: green;">< Xem trước </button>
+	<button id="next" style="width:50%;height: 30px; color: white; background-color: blue;"> Xem tiếp ></button>
 	</div>
     </div>
 
@@ -82,7 +87,7 @@ document.addEventListener("keyup", function(e) {
             iframe.src = "https://bsgdtphcm.vn/ecg/ecg_poll2.php?poll_id=" + (id + ne);
             ne && (input.value = id + ne);
             //iframe.style.width = "850px";
-            iframe.style.height = "500px";
+            iframe.style.height = "550px";
             iframe.style.border = null;
             // Chèn iframe vào web
             div.appendChild(iframe);
