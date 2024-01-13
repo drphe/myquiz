@@ -33,9 +33,10 @@
     <div class="left">
 	<h3> CHỌN ID CÂU HỎI ECG</h3>
         <input type="number" id="poll_id" value="1841" width = "50px"/>
-        <button id="ok"> Xem</button><button id="next"> Next</button>
+        <button id="ok"> Xem</button>
 	<br/>
-	<a href = "https://bsgdtphcm.vn/xquang/viewopen.php" target=_blank> ÔN LUYỆN XQ </a>
+	<a href = "https://bsgdtphcm.vn/xquang/viewopen.php" target=_blank> ÔN LUYỆN XQ </a><br/>
+<div>  <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040314040" target="_blank">Bất thường trục khí quản có di lệch?</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040324040" target="_blank">Bất thường khí quản bên phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040334040" target="_blank">Bất thường khí quản bên trái?</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040344040" target="_blank">Bất thường góc carina?</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040354040" target="_blank">Tổn thương nhu mô phổi phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040364040" target="_blank">Tổn thương nhu mô phổi trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040374040" target="_blank">Bất thường bờ tim phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040384040" target="_blank">Bất thường bờ tim trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=4040394040" target="_blank">Bất thường bờ sườn hoành phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031304040" target="_blank">Bất thường bờ sườn hoành trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031314040" target="_blank">Bất thường góc tâm hoành phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031324040" target="_blank">Bất thường góc tâm hoành trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031334040" target="_blank">Bóng tim phải lớn</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031344040" target="_blank">Bóng tim trái lớn</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031354040" target="_blank">Bất thường trung thất trước</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031364040" target="_blank">Bất thường trung thất giữa</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031374040" target="_blank">Bất thường trung thất sau</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031384040" target="_blank">Bất thường rốn phổi phải</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404031394040" target="_blank">Bất thường rốn phổi trái</a></div><div>   <a href="https://bsgdtphcm.vn/api/xquang_view.php?chude=404032304040" target="_blank">Bất thường động mạch chủ lên</a></div><div>  </div>
     </div>
 
     <div class="right">
@@ -46,25 +47,26 @@
         const div = document.querySelector("#poll");
         const input = document.querySelector("input");
         const button = document.querySelector("#ok");
-        const button2 = document.querySelector("#next");
-        addQuestion();
+        addQuestion(0);
         input.addEventListener("keyup", function(t) {
             13 === t.keyCode && (t.preventDefault(), addQuestion())
         })
+
+document.addEventListener("keyup", function(e) {
+    39 === e.keyCode && (e.preventDefault(), addQuestion(1))
+    37 === e.keyCode && (e.preventDefault(), addQuestion(-1))
+})
         // Xử lý sự kiện click của button
         button.addEventListener("click", () => {
             addQuestion(0);
-        });
-        button2.addEventListener("click", () => {
-            addQuestion(1);
         });
 
         function addQuestion(ne) {
             const id = parseInt(input.value);
             div.innerHTML = "";
             const iframe = document.createElement("iframe");
-            iframe.src = "https://bsgdtphcm.vn/ecg/ecg_poll2.php?poll_id=" + (ne ? id + 1 : id);
-            ne && (input.value = id + 1)
+            iframe.src = "https://bsgdtphcm.vn/ecg/ecg_poll2.php?poll_id=" + (id + ne);
+            input.value = id + ne;
             iframe.style.width = "800px";
             iframe.style.height = "500px";
             iframe.style.border = null;
