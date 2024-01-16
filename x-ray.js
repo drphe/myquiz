@@ -26,7 +26,27 @@ function debounce(func, delay) {
 
 async function getData() {
     try {
-        var a = await fetch("https://bsgdtphcm.vn/xquang/viewopen.php");
+        //var a = await fetch("https://bsgdtphcm.vn/xquang/viewopen.php");
+	var a= await fetch("https://bsgdtphcm.vn/xquang/viewopen.php", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "vi,en;q=0.9,en-US;q=0.8,fr;q=0.7",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "sec-ch-ua": "\"Not A(Brand\";v=\"99\", \"Microsoft Edge\";v=\"121\", \"Chromium\";v=\"121\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "referrer": "https://bsgdtphcm.vn/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "omit"
+});
         var b = await a.text();
         var parser = new DOMParser();
         var doc = parser.parseFromString(b, "text/html");
@@ -91,3 +111,4 @@ document.querySelector("#get").addEventListener("click", async () => {
     await getData();
     loading(0)
 });
+
