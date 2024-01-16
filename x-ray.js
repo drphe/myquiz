@@ -32,29 +32,62 @@ async function getData() {
         var doc = parser.parseFromString(b, "text/html");
         var img = doc.querySelectorAll("body img");
         image.src = img[3].src;
-        //console.log(image[3]);
+	link.value = img[3].src;
+        console.log(img[3].src);
         var label = doc.querySelectorAll("body label");
-        console.log(label[0]);
+        console.log(label[0].innerText);
         var page = doc.querySelectorAll("body p");
-        console.log(page[0]);
+        console.log(page[0].innerText);
         const div = document.querySelector("#container");
-        div.innerHTML = label[0].innerText + "<br/>" + page[0].innerText;
+        if(page[0].innerText) {
+		div.innerHTML = label[0].innerText + "<br/>" + page[0].innerText;
+	}
+	await getImg();
     } catch (error) {
         alert("Có lỗi!");
+	getData();
     }
 }
 
+function loading(e = 0) {
+    document.getElementById("loading").innerHTML = e ? `
+	<div class="loading-container">
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>` : ''
+}
+function getImg(){
+	const imgs = document.querySelector("img");
+if (!imgs.src) {
+  fetch(imgs.alt).then((response) => {
+    const blob = response.blob();
+    imgs.src = URL.createObjectURL(blob);
+    console.log("load img!")
+  });
+}
+}
 // Tự động chạy khi trang web tải xong
 updateImage();
 
 brightnessInput.addEventListener("input", debounce(updateImage, 50));
 contrastInput.addEventListener("input", debounce(updateImage, 50));
 image.oncontextmenu = () => {
-    return false;
+    //return false;
 };
-document.querySelector("#load").addEventListener("click", () => {
+document.querySelector("#load").addEventListener("click", async () => {
     image.src = link.value;
+    await getImg();
 });
-document.querySelector("#get").addEventListener("click", () => {
-    getData();
+document.querySelector("#get").addEventListener("click", async () => {
+    loading(!0)
+    await getData();
+    loading(0)
 });
