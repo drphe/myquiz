@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+	<body>
+		<!-- 1. The widget will replace this <div> tag. -->
+		<p style="text-align: center; font-size: 150%;" id="title">Watch people pronounce <strong><span id="word"></span></strong>
+		(Video <span id="currentTrack"></span> of <span id="totalTracks"></span>)
+		</p>
+		<div id="widget-1" style="width: 75% !important; height: 150% !important;"></div>
+		<p id="found_results" style="display: none;"></p>
+		<script>
+
+			// 1. Get elsa check word from URL
+			var url = window.location.href;
+			var elsaCheckWord = "";
+			if(url.indexOf('?') != -1)
+			{
+				elsaCheckWord = window.location.search.split("?")[1];
+				decodedCheckWord = unescape(elsaCheckWord);
+				document.getElementById("word").innerHTML = decodedCheckWord;
+			}else{
+			
+				alert("Don't have a word!");
+				elsaCheckWord = "word"
+				document.getElementById("word").innerHTML = elsaCheckWord;
+			}
+			// 2. This code loads the widget API code asynchronously.
+			var tag = document.createElement('script');
+
+			tag.src = "https://youglish.com/public/emb/widget.js";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			// 3. This function creates a widget after the API code downloads.
+			var widget;
+			function onYouglishAPIReady(){
+				widget = new YG.Widget("widget-1", {
+					autoStart: 1,
+					width: 1200,
+					height: 800,
+					components:216, //search box, caption, title
+					events: {
+						"onSearchDone": onSearchDone,
+						"onVideoChange": onVideoChange,
+						"onCaptionConsumed": onCaptionConsumed
+					}
+				});
+
+				widget.search(elsaCheckWord.toString(), "US")
+
+			}
+
+
+			var views = 0, curTrack = 0, totalTracks = 0;
+
+			// 5. The API will call this method when the search is done
+			function onSearchDone(event){
+
+				// document.getElementById("widget-1").style.width = "1080px !important";
+
+				if (event.totalResult === 0)
+				{
+					console.log("total result,", event.totalResult)
+					document.getElementById("found_results").innerHTML = "false";
+					localStorage.setItem("found_results", "false");
+					document.getElementById("title").style.display = "None";
+				}
+				else
+				{
+					console.log("total result,", event.totalResult)
+					document.getElementById("found_results").innerHTML = "true";
+					localStorage.setItem("found_results", "true");
+					totalTracks = event.totalResult;
+					document.getElementById("currentTrack").innerHTML = curTrack + 1;
+					document.getElementById("totalTracks").innerHTML = totalTracks;
+				}
+			}
+
+			// 6. The API will call this method when switching to a new video.
+			function onVideoChange(event){
+				curTrack = event.trackNumber;
+				document.getElementById("currentTrack").innerHTML = curTrack;
+				views = 0;
+			}
+
+			// 7. The API will call this method when a caption is consumed.
+			function onCaptionConsumed(event){
+				if (++views < 3)
+					widget.replay();
+				else
+					if (curTrack < totalTracks)
+						widget.next();
+			}
+		</script>
+	</body>
+</html>
