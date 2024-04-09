@@ -1041,6 +1041,86 @@ const DATA = {
                 "A": "D",
                 "Q": "Lồi mắt gặp trong bệnh lí tuyến giáp nào sau đây"
             },
+            "131": {
+                "1": "Khớp cùng chậu",
+                "2": "Khớp liên đốt ngón tay gần bàn tay",
+                "3": "Khớp liên đốt ngón xa bàn tay",
+                "4": "Cột sống thắt lưng",
+                "A": "B",
+                "Q": "Bệnh viêm khớp dạng thấp thường tổn thương ở"
+            },
+            "132": {
+                "1": "Khớp háng",
+                "2": "Cột sống cổ",
+                "3": "Khớp gối",
+                "4": "Khớp cổ tay",
+                "A": "D",
+                "Q": "Tổn thương khớp sớm nhất trong bệnh viêm khớp dạng thấp thường ở"
+            },
+            "133": {
+                "1": "Tăng tốc độ lắng hồng cầu",
+                "2": "Tăng nồng độ RF huyết thanh",
+                "3": "Tăng thể tích hồng cầu",
+                "4": "Tăng nồng độ acid uric huyết thanh",
+                "A": "A",
+                "Q": "Đặc điểm xét nghiệm máu thường gặp trong đợt hoạt động của bệnh viêm khớp dạng thấp là?"
+            },
+            "134": {
+                "1": "Nồng độ anti-CCP huyết thanh",
+                "2": "Nồng độ anti-CCP dịch khớp",
+                "3": "Nồng độ ANA huyết thanh",
+                "4": "Nồng độ RF dịch khớp",
+                "A": "A",
+                "Q": "Xét nghiệm sử dụng chẩn đoán bệnh viêm khớp dạng thấp là"
+            },
+            "135": {
+                "1": "Loãng xương",
+                "2": "Lao khớp",
+                "3": "Viêm khớp dạng thấp",
+                "4": "Thoái hoá khớp",
+                "A": "C",
+                "Q": "Một bệnh nhân nữ, 50 tuổi, sưng, đau các khớp cổ tay, bàn ngón tay, liên đốt ngón gần bàn tay 2 bên từ 1 năm nay, không có hạt tophi, chẩn đoán phù hợp nhất là:"
+            },
+            "136": {
+                "1": "Đái tháo đường",
+                "2": "Đái tháo nhạt",
+                "3": "Basedow",
+                "4": "Hội chứng Conn",
+                "A": "C",
+                "Q": "Nhóm triệu chứng ăn nhiều, uống nhiều, đái nhiều, ra mồ hôi nhiều phù hợp nhất trong bệnh nào sau đây:"
+            },
+            "137": {
+                "1": "Cường chứng năng tuyến giáp",
+                "2": "Suy chức năng tuyến giáp",
+                "3": "Sau gắng sức",
+                "4": "Xúc động",
+                "A": "A",
+                "Q": "Triệu chứng mạn nhanh thường xuyên gặp trong nguyên nhân nào sau đây:"
+            },
+            "138": {
+                "1": "6-8 tuần",
+                "2": "6-8 tháng",
+                "3": "8-12 tháng",
+                "4": "18-24 tháng",
+                "A": "A",
+                "Q": "Thời gian điều trị giai đoạn tấn công của bệnh Basedow kéo dài"
+            },
+            "139": {
+                "1": "Sulfunylurea",
+                "2": "Thiazolidinedione",
+                "3": "Ức chế Alpha-glucosidase",
+                "4": "Metformin",
+                "A": "D",
+                "Q": "Theo khuyến cáo của hiệp hội đái thoá đường Hoa Kỳ (ADA 2014) thuốc nào được lựa chọn đầu tiên khi bắt đầu dùng thuốc cho bệnh nhân ĐTĐ typ 2?"
+            },
+            "140": {
+                "1": "Metformin",
+                "2": "Sulfunylurea",
+                "3": "Ức chế DPP-4",
+                "4": "Insulin",
+                "A": "D",
+                "Q": "Bệnh nhân ĐTĐ typ 2 đang có áp xe phổi, chỉ định thuốc hạ đường huyết nào?"
+            },
             "name": "KHỚP - NỘI TIẾT - A11"
         },
         "A12": {
@@ -1777,7 +1857,7 @@ const DATA = {
                 "2": "Các dung dịch muối, đường đẳng trường",
                 "3": "Các dung dịch muối, đường ưu trường",
                 "4": "các chế phẩm máu",
-                "A": "A",
+                "A": "B",
                 "Q": "Loại dịch nào được khuyến cáo sử dụng cho BN suy thận cấp"
             },
             "93": {
@@ -1811,6 +1891,46 @@ const DATA = {
                 "4": "Mức lọc cầu thận từ 60-89 ml/phút",
                 "A": "D",
                 "Q": "Khi nào BN được chẩn đoán bệnh thận mạn tính giai đoạn 2"
+            },
+            "97": {
+                "1": "Vị trí tổn thương ống thận; cầu thận trong viêm cầu thận mạn.",
+                "2": "Vị trí tổn thương cầu thận; ống thận trong bệnh thận do tăng huyết áp.",
+                "3": "Vị trí tổn thương cầu thận; ống thận trong bệnh thận do đái tháo đường",
+                "4": "Vị trí tổn thương cầu, ống thận trong viêm cầu thận, đái tháo đường và tăng huyết áp.",
+                "A": "A",
+                "Q": "Kích thước trụ có giá trị trong chẩn đoán tổn thương bệnh lý nào?"
+            },
+            "98": {
+                "1": "Trụ niệu",
+                "2": "Protein niệu",
+                "3": "Hồng cầu niệu",
+                "4": "Bạch cầu niệu",
+                "A": "B",
+                "Q": "Trong điều kiện không có sinh thiết, chỉ số nào có ý nghĩa nhất trong chẩn đoán viêm cầu thận mạn?"
+            },
+            "99": {
+                "1": "Xét nghiệm hàng tuần vẫn thấy protein niệu, 3 lần liên tiếp",
+                "2": "Xét nghiệm hàng tháng thấy protein niệu, 3 lần liên tiếp",
+                "3": "Xét ngiệm mỗi 2 tuần thấy protein niệu, 3 lần liên tiếp",
+                "4": "Xét nghiệm mỗi 10 ngày thấy protein niệu, 3 lần liên tiếp",
+                "A": "B",
+                "Q": "Đánh giá protein niệu kéo dài trong viêm cầu thận mạn dựa vào tiêu chí nào?"
+            },
+            "100": {
+                "1": "Điều trị tăng huyết áp",
+                "2": "Điều trị giảm thải protein niệu",
+                "3": "Điều trị tăng huyết áp và giảm thải protein niệu",
+                "4": "Điều trị suy tim",
+                "A": "C",
+                "Q": "Ức chế men chuyển có tác dụng gì trong bệnh viêm cầu thận?"
+            },
+            "101": {
+                "1": "Thiếu nguyên liệu tạo máu",
+                "2": "Do cơ quan tạo máu",
+                "3": "Do chảy máu và mất máu",
+                "4": "Do cơ quan tạo máu, thiếu nguyên liệu và chảy mất máu.",
+                "A": "D",
+                "Q": "Thiếu máu ở bệnh nhân suy thận mạn tính là nguyên nhân nào?"
             },
             "name": "THẬN NỘI KHOA - AM12"
         },
@@ -2800,11 +2920,10 @@ const DATA = {
                 "Q": "Enzym nào sau đây giữ vai trò chính trong hoạt hóa các enzym tụy, gây viêm tụy cấp?"
             },
             "124": {
-                "1": "Đáp án: A",
-                "2": "Đau bụng, sốt, tiêu chảy.",
-                "3": "Đau bụng, nôn, tiêu chảy.",
-                "4": "Đau bụng, nôn, bí trung đại tiện.",
-                "5": "Đau bụng, sốt, vàng da.",
+                "1": "Đau bụng, sốt, tiêu chảy.",
+                "2": "Đau bụng, nôn, tiêu chảy.",
+                "3": "Đau bụng, nôn, bí trung đại tiện.",
+                "4": "Đau bụng, sốt, vàng da.",
                 "A": "C",
                 "Q": "Triệu chứng lâm sàng hay gặp trong viêm tụy cấp là"
             },
@@ -3134,7 +3253,7 @@ const DATA = {
                 "2": "Hemoglobin < 70g/l",
                 "3": "Hemoglobin < 80g/l",
                 "4": "Hemoglobin < 90g/l",
-                "A": "C",
+                "A": "B",
                 "Q": "Chỉ định truyền máu trong chảy máu tiêu hóa cấp tính thường được đặt ra khi"
             },
             "166": {
@@ -3147,8 +3266,8 @@ const DATA = {
             },
             "167": {
                 "1": "đau theo nhịp điệu",
-                "2": "đau theo chu kì nhịp điệu",
-                "3": "Thươờng kèm theo vàng da vàng mắt",
+                "2": "đau theo chu kì, nhịp điệu",
+                "3": "Thường kèm theo vàng da vàng mắt",
                 "4": "bạch cầu đa nhân trung tính cao",
                 "A": "B",
                 "Q": "loét dạ dày có đặc điểm chủ yếu là"
@@ -3450,7 +3569,7 @@ const DATA = {
                 "3": "viêm động mạch",
                 "4": "tắc động mạch dưới đòn phải ( hoặc cánh tay phải)",
                 "A": "D",
-                "Q": "Bắt động mạch quay bên phải không đập, động mạch quay bên trái đập bình thường gặp khi:Tắc động mạch dưới đòn phải (hoặc cánh tay phải)"
+                "Q": "Bắt động mạch quay bên phải không đập, động mạch quay bên trái đập bình thường gặp khi:"
             },
             "21": {
                 "1": "Thất phải to.",
@@ -4291,6 +4410,30 @@ const DATA = {
                 "4": "Phù chân",
                 "A": "C",
                 "Q": "Trường hợp suy tim nào sau đây được dùng thuốc chẹn Beta giao cảm"
+            },
+            "126": {
+                "1": "Tắc mạch phổi",
+                "2": "Sốc tim",
+                "3": "Loạn nhịp thất",
+                "4": "Hở van 2 lá cấp",
+                "A": "D",
+                "Q": "Nhồi máu cơ tim cấp không gây biến chứng sau"
+            },
+            "127": {
+                "1": "Giãn động mạch vành",
+                "2": "Thông động mạch vành",
+                "3": "Chống ngưng tập tiểu cầu",
+                "4": "Giảm đau bằng Morphin",
+                "A": "A",
+                "Q": "Biện pháp tốt nhất trị nhồi máu cơ tim cấp"
+            },
+            "128": {
+                "1": "Đoạn ST chênh lên",
+                "2": "Khoảng QT kéo dài",
+                "3": "Sóng Q",
+                "4": "Đoạn ST chênh xuống",
+                "A": "B",
+                "Q": "Biến đổi điện tim nào không dùng để chẩn đoán nhồi máu cơ tim cấp"
             },
             "name": "NỘI TIM MẠCH - AM2"
         },
@@ -6886,7 +7029,7 @@ const DATA = {
                 "1": "Dựa vào triệu chứng lâm sàng thần kinh hồi phục hoàn toàn trong 1h kể từ lúc khởi phát",
                 "2": "Dựa vào hình ảnh chụp CTscaner sọ não, không thấy hình ảnh nhồi máu não",
                 "3": "Dựa vào hình ảnh MRI sọ não xung T1, T2, FLAIR, chụp mạch máu não không thấy tổn thương",
-                "4": "Dựa vào hình ảnh MRI sọ não xung khuếch tán DWI và bản đồ khuếch tán biểu kiến ABC không thấy tổn thương",
+                "4": "Dựa vào hình ảnh MRI sọ não xung khuếch tán DWI và bản đồ khuếch tán biểu kiến ADC không thấy tổn thương",
                 "A": "D",
                 "Q": "Định nghĩa cơn thiếu máu não thoáng qua có đoạn\"… có bằng chứng loại trừ thiếu máu não cấp tính\". Anh/chị hãy cho biết căn cứ  vào đây để có được bằng chứng trên"
             },
@@ -6904,7 +7047,7 @@ const DATA = {
                 "3": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 140mmHg ngay ở giai đoạn cấp",
                 "4": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 140mmHg sau giai đoạn cấp",
                 "A": "C",
-                "Q": "Điều trị tăng hình ảnh trong bệnh đột quỵ  não não thể chảy máu não nhằm mục tiêu"
+                "Q": "Điều trị tăng huyết áp trong bệnh đột quỵ  não não thể chảy máu não nhằm mục tiêu"
             },
             "127": {
                 "1": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 180mmHg",
@@ -6912,7 +7055,7 @@ const DATA = {
                 "3": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 140mmHg ngay ở giai đoạn cấp",
                 "4": "Duy trì huyết áp tâm thu ở mức nhỏ hơn 140mmHg sau giai đoạn cấp",
                 "A": "D",
-                "Q": "Điều trị tăng hình ảnh trong bệnh đột quỵ  não não thể nhồi máu não  nhằm mục tiêu"
+                "Q": "Điều trị tăng huyết áp trong bệnh đột quỵ  não não thể nhồi máu não nhằm mục tiêu"
             },
             "128": {
                 "1": "Ngay sau khi khởi phát nếu không có chống chỉ định",
@@ -7930,7 +8073,7 @@ const DATA = {
                 "2": "Có sức đề kháng tốt với ngoại cảnh",
                 "3": "Thuộc họ Flaviviridae",
                 "4": "Bộ gen là chuỗi đơn AND",
-                "A": "C",
+                "A": "A",
                 "Q": "Đặc điểm nào phù hợp với virus sởi?"
             },
             "105": {
@@ -8250,7 +8393,7 @@ const DATA = {
                 "2": "Quinin, Artemisinin, Artesunat, Artemether, Dihydroartemisin",
                 "3": "Chloroquin, Mefloquin, Pyrimethamin, Primaquin diphosphat",
                 "4": "Mefloquin, Pyrimethamin, Quinin, Dihydroartemisin",
-                "A": "c",
+                "A": "C",
                 "Q": "Các thuốc chống sốt rét tổng hợp là:"
             },
             "145": {
@@ -8298,7 +8441,6 @@ const DATA = {
                 "2": "Mật độ KST vào ngày D3 ≥ 25% mật độ KST ngày D0",
                 "3": "Còn KST vào ngày D4 và nhiệt độ nách ≥ 37,5°C",
                 "4": "Hết sốt và sạch KST sau 3 ngày điều trị cho tới ngày thứ 28",
-                "5": "                                                          THE END",
                 "A": "A",
                 "Q": "Thất bại điều trị sốt rét muộn là khi có biểu hiện sau:"
             },
@@ -8947,7 +9089,7 @@ const DATA = {
                 "1": "VC=TV+ IRC+ FEV1",
                 "2": "VC=TV+ RV+ ERV",
                 "3": "VC=TV+ IC+ FRC",
-                "4": "VC= TV+IRC +ERV",
+                "4": "VC= TV+IRV +ERV",
                 "A": "D",
                 "Q": "Công thức nào sau đây ĐÚNG về dung tích sống (VC) liên quan tới các thông số thể tích khí lưu thông (TV), thể tích khí dự trữ hít vào (IRV), thể tích khí dự trữ thở ra (ERV), dung tích hít vào (IC), thể tích thở ra tối đa trong giây đầu tiên (FEV1) và dung tích cặn chức năng (FRC)?"
             },
@@ -12795,7 +12937,7 @@ const DATA = {
             "65": {
                 "1": "Trypsine có tác dụng cắt kiên kết peptid mà nhóm -CO thuộc acid amin thơm",
                 "2": "Trypsine có tác dụng cắt kiên kết peptid mà nhóm -CO thuộc acid amin kiềm",
-                "3": "Chymotrysine có tác dụng cắt kiên kết peptid mà nhóm -CO thuộc acid amin tkiềm",
+                "3": "Chymotrysine có tác dụng cắt kiên kết peptid mà nhóm -CO thuộc acid amin thơm",
                 "4": "Carboxypeptidase có tác dụng cắt đứt kiên kết peptid ở phía sâu trong phân tử protein",
                 "A": "A",
                 "Q": "Điều nào sau đây KHÔNG đúng về các men tiêu hóa protein của dịch tụy"
