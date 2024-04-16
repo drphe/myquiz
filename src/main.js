@@ -77,6 +77,7 @@
         showPopup(source, 3)
     });
 
+    var isrand = false;
     //-----Phần tạo popup câu hỏi, chấm thi
     function showPopup(source, loai = 1) {
         // khai báo
@@ -92,16 +93,19 @@
         for (const key in source) count++;
         switch (loai) {
             case 1: // ôn tập
+		isrand = false;
                 addAnswerStyle();
                 popuptitle = `Ôn tập ${name}: ${count} câu`;
                 chamthi = `<button type="button" class="btn2 checkA"><span>Test</span></button>`;
                 break;
             case 2: // kiểm tra
+		isrand = true;
                 counter();
                 chamthi = `<button type="button" class="btn2 checkA"><span>Kiểm tra</span></button>`;
                 popuptitle = `Kiểm tra ${name}: ${CONFIG.numberquestion} câu`;
                 break;
             case 3:
+		isrand = true;
                 counter();
                 chamthi = `  <button type="button" class="btn2 checkA"><span>Nộp bài</span></button>`;
                 popuptitle = `Thi thử ${name}: ${CONFIG.numberquestiontest}/${count} câu`;
@@ -138,7 +142,10 @@
                     keytext.innerHTML = "Đáp án Đúng!"
                 } else {
                     btntext.classList.add('wrong');
-                    keytext.innerHTML = "Đáp án bạn chọn không đúng, đáp án đúng là " + source[key].A;
+		    let i = DA.findIndex(s => s==source[key].A);
+                    let btntext2 = mainquiz.querySelector(`.btn-${key}-${i+1}`);
+                    btntext2.classList.add('correct');
+                    keytext.innerHTML = "Đáp án bạn chọn không đúng." + (isrand ? '': " Đáp án đúng là " +source[key].A);
                 }
                 // lưu kết quả
                 let t = JSON.parse(localStorage.getItem(CONFIG.localStorageID));
@@ -176,7 +183,6 @@
             }
         });
     }
-    var isrand = false;
     //tạo bài test
     function cTest(data, loai = 1) {
         let temp = "";
