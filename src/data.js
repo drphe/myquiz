@@ -6590,7 +6590,7 @@ const DATA = {
                 "2": "Tổn thương ở bỏn cầu/ liệt dây III ngoại vi bên tổn thương/ Liệt nửa người trung ương bên đối diện",
                 "3": "Tổn thương ở cầu não/ liệt dây III ngoại vi bên tổn thương/ Liệt nửa người trung ương bên đối diện",
                 "4": "Tổn thương ở bỏn cầu/ liệt dây VII ngoại vi bên tổn thương/ Liệt nửa người trung ương bên đối diện",
-                "A": "D",
+                "A": "A",
                 "Q": "Đặc điểm lâm sàng của hội chứng Millard-Gubler"
             },
             "71": {
