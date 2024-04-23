@@ -4295,7 +4295,7 @@ const DATA = {
                 "1": "Rung tâm trương ở mõm tim",
                 "2": "Thổi tâm trương ở LS III cạnh ức trái",
                 "3": "Thổi tâm thu ở LS III - IV cạnh ức trái lan ra xung quanh",
-                "4": "Thổi tâm thu ở LS III cạnh ức trái lan lên động mạch cảnh kèm rung miu tâm thu.",
+                "4": "Thổi tâm thu ở LS II cạnh ức phải lan lên động mạch cảnh kèm rung miu tâm thu.",
                 "A": "D",
                 "Q": "Tạp âm nào sau đây nghe được trong hẹp lỗ van động mạch chủ:"
             },
