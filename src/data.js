@@ -14020,7 +14020,7 @@ const DATA = {
                 "2": "Hành- cầu- trung não và sừng bên chất xám tủy sống các đốt thắt lưng 1-5",
                 "3": "Hành cầu não và sừng bên chất xám tủy sống đốt cùng 1,2 , 3",
                 "4": "Hành -cầu-trung não và sừng bên chất xám tủy sống đốt cùng 1,2,3",
-                "A": "C",
+                "A": "D",
                 "Q": "Câu nào đúng về trung khu của hệ thần kinh phó giao cảm"
             },
             "15": {
