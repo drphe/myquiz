@@ -1,5 +1,15 @@
 //BS.Phê
-
+//change theme
+const checkboxbtton = document.createElement('div');
+        checkboxbtton.id = "changetheme";
+	checkboxbtton.setAttribute("class", "toggle-switch");
+	checkboxbtton.innerHTML = `<label><input type = "checkbox" id="checkbox" checked><span class = "slider"></span></label>`;
+        document.body.appendChild(checkboxbtton);
+    document.querySelector("#checkbox").addEventListener("change", async function () {
+        var theme = this.checked ? 'light': 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+    });
+//main content
     const CONFIG = {
         localStorageID: "answer",
         timer: 30, // thời gian bài thi
@@ -267,13 +277,13 @@
     // bộ đếm giờ
     function counter() {
         clearInterval(countdownInterval);
-        let divclock = document.querySelector(".clock-container");
+        let divclock = document.querySelector(".hour");
         let countdownTime = CONFIG.timer * 60;
         countdownInterval = setInterval(function() {
             // Calculate minutes and seconds
             let minutes = Math.floor(countdownTime / 60);
             let seconds = countdownTime % 60;
-            divclock.innerHTML = `<img src="./src/clock.jpg" style="height:20px; width:20px;"/>  ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            divclock.innerHTML = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             if (countdownTime === 0) {
                 clearInterval(countdownInterval);
                 checkAnswer();
@@ -289,7 +299,7 @@
             var now = new Date();
             var hour = now.getHours();
             var minute = now.getMinutes();
-            document.querySelector(".clock-container").innerHTML = `<img src="./src/clock.png" style="height:20px; width:20px;"/>  ` + hour.toString().padStart(2, '0') + ":" + minute.toString().padStart(2, '0');
+            document.querySelector(".hour").innerHTML = hour.toString().padStart(2, '0') + ":" + minute.toString().padStart(2, '0');
         }, 1000);
     }
     // chấm thi

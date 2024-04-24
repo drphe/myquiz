@@ -1,4 +1,95 @@
+/*theme*/
+:root {
+--label: #fff;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+    --backgroundColor: rgb(255, 255, 255);
+    --textColor: #000;
+    --white: white;
+    --black: black;
+    --bp3button: #bfccd6;
+}
+[data-theme="dark"] {
+ --label: #28292c;
+  --dark: #d8dbe0;
+  --link: #28292c;
+    --backgroundColor: rgb(24, 28, 39);
+    --textColor: rgb(178, 181, 190);
+    --white: black;
+    --black: white;
+    --bp3button: #639abf;
+}
+.toggle-switch {
+  width: 200px;
+    scale: 0.25;
+    right: -70px;
+    position: fixed;
+    margin: 4px;
+}
+
+label {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: var(--label);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+input:checked ~ .slider {
+  background-color: var(--light);
+}
+
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: inset 28px -4px 0px 0px var(--light);
+  transition: 0.3s;
+}
+
+input:checked ~ .slider::before {
+  transform: translateX(95px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.svg-container {
+    animation: rotate 10s linear infinite;
+}
+/*main*/
 * {
+ background-color:var(--backgroundColor);
+color: var(--textColor);
   font-family: "Nunito",sans-serif, arial;
   font-size: 16px;
   line-height: 1.1;
@@ -9,8 +100,10 @@ body {
 }
 
 button {
-  background-color:aqua;
-  margin:4px;
+    background-color: var(--bp3button); 
+    margin: 4px;
+    color: var(--black);
+}
 }
 
 .btn {
@@ -44,7 +137,9 @@ border-radius: 8px;
   min-height:30px;
   min-width:40px;
 }
-
+.btn2 span {
+  background:transparent;
+}
 .container {
   background-color:rgb(111 90 193);
   color:rgb(255,255,255);
@@ -61,6 +156,14 @@ border-radius: 8px;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
+}
+.container div, .container li, .container img{
+background: transparent;
+}
+.container input{
+display: inline;
+background: transparent;
+border: none;
 }
 
 .left-box {
@@ -99,12 +202,12 @@ border-radius: 8px;
   color:rgb(92,92,92);
   border-radius:12px;
   transition:all 0.2s ease-out 0s;
-  background:rgb(255,255,255);
 }
 
 .left {
   float:left;
   font-size:20px;
+  background:transparent;
 }
 
 .popup_content {
@@ -149,10 +252,14 @@ h1 {
 }
 
 #clock-container {
-  font-size:20px!important;
+scale:1.05;
+display: flex;
+    align-items: flex-start;
+  font-size:14px!important;
   color:red;
   margin-right:20px;
   font-weight:600;
+    margin-top: 4px;
 }
 
 .answer {
